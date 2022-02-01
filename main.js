@@ -3,8 +3,8 @@ function mainProc(){
 }
 
 
-window.onload(()=>{
+window.onload = ()=>{
     document.querySelector('#go').addEventListener('click', ()=>{
         mainProc()
     })
-})
+}
