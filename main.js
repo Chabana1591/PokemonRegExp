@@ -14,15 +14,18 @@ function mainProc() {
       検索結果の追加
    -----------------------*/
   // 結果のクリア
-  const resultArea = document.querySelector("#resultList");
-  resultArea.childNodes.forEach((e) => e.remove());
+  const resultArea = document.querySelector("#resultArea");
+  resultArea.removeChild(resultArea.querySelector("ul"));
+
+  const resultList = document.createElement("ul");
   for (s of searched) {
-      // 結果エレメントの生成
-      const result = document.createElement("li");
-      result.textContent = s;
-      // 結果の追加
-    resultArea.appendChild(result);
+    // 結果エレメントの生成
+    const result = document.createElement("li");
+    result.textContent = s;
+    // 結果の追加
+    resultList.appendChild(result);
   }
+  resultArea.appendChild(resultList);
 }
 
 window.onload = () => {
