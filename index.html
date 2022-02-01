@@ -9,9 +9,19 @@
     <script src="./main.js"></script>
   </head>
   <body>
+    <h1>ポケモンの名前検索ツール（正規表現）</h1>
+    <div id="descriptionArea">
+      <p><a href="https://wordle.mega-yadoran.jp/">ポケモンWordle</a>用に作った正規表現検索ツールです。</p>
+      <p>第８世代まで対応しているはず（<a href="https://ja.wikipedia.org/wiki/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3%E4%B8%80%E8%A6%A7">参考：Wikipedia</a>）</p>
+      <p>ex)「フシギ..」=> フシギ<strong>ダネ</strong>、フシギ<strong>ソウ</strong>、フシギ<strong>バナ</strong></p>
+      <p>正規表現については詳しくは<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Regular_Expressions">MDN 正規表現</a>を参考にしてください</p>
+    </div>
     <div id="searchArea">
-      <input type="text" name="search" id="search" />
-      <input type="button" value="go" id="go" />
+      <p>↓ここから検索↓</p>
+      <form id="searchForm" action="" >
+        <input type="text" name="search" id="search" />
+        <input type="submit" value="go" id="go" />
+      </form>
     </div>
     <div id="resultArea">
       <ul></ul>

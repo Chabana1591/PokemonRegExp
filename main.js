@@ -29,7 +29,9 @@ function mainProc() {
 }
 
 window.onload = () => {
-  document.querySelector("#go").addEventListener("click", () => {
+  document.querySelector("#searchForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+
     mainProc();
   });
 };
