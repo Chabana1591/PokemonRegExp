@@ -7,7 +7,9 @@ function mainProc(){
     const result = document.createElement('span')
     result.textContent = searched
 
-    document.querySelector('#resultArea').appendChild(result)
+    const resultArea = document.querySelector('#resultArea')
+    resultArea.childNodes.forEach((e)=>e.remove())
+    resultArea.appendChild(result)
 }
 
 
